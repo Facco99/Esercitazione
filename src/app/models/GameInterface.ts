@@ -3,5 +3,7 @@ export interface GameInterface{
     nome:string;
     descrizione:string;
     genere:string;
+    rating:number;
     prezzo:string;
+    annoUscita:Date;
 }
