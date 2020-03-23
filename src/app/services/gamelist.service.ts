@@ -7,7 +7,8 @@ import { GameItem } from '../models/GameInterface';
 export class GamelistService {
 
     private gameListStored: GameItem[] = [
-      {id: 1, nome:"Fifa 20",descrizione: "Gioco di calcio",genere: "Sport",rating: 4,prezzo:70,annoUscita:new Date(2019, 9)}
+      {id: 1, nome:"Fifa 20",descrizione: "Gioco di calcio",genere: "Sport",rating: 4,prezzo:70,annoUscita:new Date(2019, 9)},
+      {id: 2, nome:"Fortnite",descrizione: "100vs game",genere: "Battleroyal",rating: 5,prezzo:0,annoUscita:new Date(2017, 9)}
     ];
 
   constructor() { }
