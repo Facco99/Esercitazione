@@ -1,9 +1,9 @@
-export interface GameInterface{
+export interface GameItem{
     id:number;
     nome:string;
     descrizione:string;
     genere:string;
     rating:number;
-    prezzo:string;
+    prezzo:number;
     annoUscita:Date;
 }

@@ -1,6 +1,3 @@
 <ul>
-    <li *ngFor="let menuItem of menuList" [class.active]="menuItem.selected">
-        {{menuItem.description}}
-        <button (click)="selectedComponent(menuItem.id)">></button>
-    </li>
+    <button *ngFor="let menuItem of menuList" (click)="selectedComponent(menuItem.id)">{{menuItem.description}}</button>
 </ul>
