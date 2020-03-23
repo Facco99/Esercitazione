@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GameItem } from 'src/app/models/GameInterface';
+import { GamelistService } from 'src/app/services/gamelist.service';
 
 @Component({
   selector: 'app-game-list',
@@ -8,13 +9,12 @@ import { GameItem } from 'src/app/models/GameInterface';
 })
 export class GameListComponent implements OnInit {
 
-  gameList: GameItem[] = [
-    {id: 1, nome:"Fifa 20",descrizione: "Gioco di calcio",genere: "Sport",rating: 4,prezzo:70,annoUscita:new Date}
-  ];
+  constructor(private gameListService: GamelistService) { 
 
-  constructor() { }
-
-  ngOnInit(): void {
   }
 
+  ngOnInit(): void {
+    this.gameListService;
+  }
+  gameList: GameItem[] = this.gameListService.getGameList();
 }
