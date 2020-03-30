@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {NgForm} from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  userName:string;
+  password:string;
+
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
+  }
+
+  formLogin(form: NgForm){
+    sessionStorage.setItem("user",form.value.username);
+    this.router.navigateByUrl("/home");
   }
 
 }

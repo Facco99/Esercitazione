@@ -8,6 +8,8 @@ import { MenuComponent } from './components/menu/menu.component';
 import { EditGameComponent } from './components/edit-game/edit-game.component';
 import { GameDetailComponent } from './components/game-detail/game-detail.component';
 import { LoginComponent } from './components/login/login.component';
+import { EsercitazioneRoutingModule } from './app-routing.module';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { LoginComponent } from './components/login/login.component';
     LoginComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    EsercitazioneRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
