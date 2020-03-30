@@ -11,7 +11,8 @@ const appRoutes: Routes = [
     {path: 'game-list', component:GameListComponent},
     {path: 'edit-game', component:EditGameComponent},
     {path: 'game-detail/:id', component:GameDetailComponent},
-    {path: 'login', component:LoginComponent}
+    {path: 'login', component:LoginComponent},
+    {path: '', redirectTo: '/login', pathMatch:'full'}
 ];
 
 @NgModule({

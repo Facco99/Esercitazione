@@ -8,9 +8,6 @@ import { MenuItem } from 'src/app/models/menu-item.interface';
 })
 export class MenuComponent implements OnInit {
 
-  @Output()
-  selectMenuItem: EventEmitter<number>= new EventEmitter<number>();
-
   menuList: MenuItem[] = [
     { id: 1, description: 'Home', url: "/home"},
     { id: 2, description: 'Lista giochi', url: "/game-list"},

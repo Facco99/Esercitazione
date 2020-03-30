@@ -9,6 +9,7 @@ import { EditGameComponent } from './components/edit-game/edit-game.component';
 import { GameDetailComponent } from './components/game-detail/game-detail.component';
 import { LoginComponent } from './components/login/login.component';
 import { EsercitazioneRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { EsercitazioneRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     EsercitazioneRoutingModule
   ],
   providers: [],

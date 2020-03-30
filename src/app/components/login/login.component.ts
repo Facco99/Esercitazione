@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {NgForm} from '@angular/forms';
 import { Router } from '@angular/router';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -9,17 +10,16 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  userName:string;
+  username:string;
   password:string;
 
-  constructor(private router:Router) { }
+  constructor(private loginService:LoginService) { }
 
   ngOnInit(): void {
   }
 
-  formLogin(form: NgForm){
-    sessionStorage.setItem("user",form.value.username);
-    this.router.navigateByUrl("/home");
+  login() {
+    this.loginService.eseguiLogin(this.username,this.password);
   }
 
 }
