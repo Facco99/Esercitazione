@@ -27,4 +27,9 @@ export class MenuComponent implements OnInit {
       });
   }
 
+  logout(){
+    sessionStorage.removeItem('user');
+    this.router.navigateByUrl("/login");
+  }
+
 }
