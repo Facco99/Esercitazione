@@ -6,13 +6,14 @@ import { GameListComponent } from './components/game-list/game-list.component';
 import { EditGameComponent } from './components/edit-game/edit-game.component';
 import { GameDetailComponent } from './components/game-detail/game-detail.component';
 import { LoginService } from './guard/login.service';
+import { CanactivateService } from './guard/canactivate-login.service';
 
 const appRoutes: Routes = [
     {path: 'home', component:HomeComponent, canActivate: [LoginService]},
     {path: 'game-list', component:GameListComponent, canActivate: [LoginService]},
     {path: 'edit-game', component:EditGameComponent, canActivate: [LoginService]},
     {path: 'game-detail/:id', component:GameDetailComponent, canActivate: [LoginService]},
-    {path: 'login', component:LoginComponent},
+    {path: 'login', component:LoginComponent, canActivate: [CanactivateService]},
     {path: '', redirectTo: '/login', pathMatch:'full'}
 ];
 
