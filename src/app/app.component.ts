@@ -9,9 +9,4 @@ export class AppComponent {
   componentToShow: number = 1;
   gameIdForDetail: number;
 
-  showDetailPage(id: number){
-    this.gameIdForDetail = id;
-    this.componentToShow = 4;
-  }
-
 }

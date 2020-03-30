@@ -10,8 +10,8 @@ const appRoutes: Routes = [
     {path: 'home', component:HomeComponent},
     {path: 'game-list', component:GameListComponent},
     {path: 'edit-game', component:EditGameComponent},
-    {path: 'game-detail', component:GameDetailComponent},
-    {path:'login', component:LoginComponent}
+    {path: 'game-detail/:id', component:GameDetailComponent},
+    {path: 'login', component:LoginComponent}
 ];
 
 @NgModule({

@@ -12,21 +12,15 @@ export class MenuComponent implements OnInit {
   selectMenuItem: EventEmitter<number>= new EventEmitter<number>();
 
   menuList: MenuItem[] = [
-    { id: 1, description: 'Home', selected: true},
-    { id: 2, description: 'Lista giochi', selected: false},
-    { id: 3, description: 'Modifica gioco', selected: false}
+    { id: 1, description: 'Home', url: "/home"},
+    { id: 2, description: 'Lista giochi', url: "/game-list"},
+    { id: 3, description: 'Modifica gioco', url: ""}
+    
   ];
 
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  selectedComponent(id: number){
-    for(let menuItem of this.menuList){
-      menuItem.selected = id === menuItem.id;
-    }
-    this.selectMenuItem.emit(id);
   }
 
 }
