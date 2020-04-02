@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class MenuComponent implements OnInit {
 
   currentRoute:string=null;
+  currentRule:string=null;
   user:string;
 
   menuList: MenuItem[] = [
@@ -25,6 +26,7 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
     this.router.events.subscribe(value => {
       this.currentRoute=this.router.url.toString();
+      this.currentRule = sessionStorage.getItem('ruolo');
       this.user = sessionStorage.getItem('user');
       });
   }

@@ -25,4 +25,10 @@ export class GameListComponent implements OnInit {
     this.route.navigateByUrl("/edit-game");
   }
 
+  showEdit():boolean{
+    if(sessionStorage.getItem('ruolo')==="admin")
+      return true;
+    return false;
+}
+
 }
