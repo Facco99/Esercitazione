@@ -1,4 +1,5 @@
 <ul *ngIf="currentRoute!='/login'">
+    <div>Benvenuto {{user}}</div>
     <li><button *ngFor="let menuItem of menuList" routerLink='{{menuItem.url}}'>{{menuItem.description}}</button></li>
     <button (click)="logout()">Logout</button>
 </ul>

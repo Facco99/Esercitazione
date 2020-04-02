@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class MenuComponent implements OnInit {
 
   currentRoute:string=null;
+  user:string;
 
   menuList: MenuItem[] = [
     { id: 1, description: 'Home', url: "/home"},
@@ -18,11 +19,13 @@ export class MenuComponent implements OnInit {
     
   ];
 
-  constructor(private router:Router) { }
+  constructor(private router:Router) {
+   }
 
   ngOnInit(): void {
     this.router.events.subscribe(value => {
       this.currentRoute=this.router.url.toString();
+      this.user = sessionStorage.getItem('user');
       });
   }
 
