@@ -14,7 +14,7 @@ export class MenuComponent implements OnInit {
   menuList: MenuItem[] = [
     { id: 1, description: 'Home', url: "/home"},
     { id: 2, description: 'Lista giochi', url: "/game-list"},
-    { id: 3, description: 'Modifica gioco', url: "edit-game"}
+    { id: 3, description: 'Modifica gioco', url: "/edit-game"}
     
   ];
 
@@ -22,13 +22,13 @@ export class MenuComponent implements OnInit {
 
   ngOnInit(): void {
     this.router.events.subscribe(value => {
-      //console.log('current route: ', this.router.url.toString());
       this.currentRoute=this.router.url.toString();
       });
   }
 
   logout(){
     sessionStorage.removeItem('user');
+    sessionStorage.removeItem('ruolo');
     this.router.navigateByUrl("/login");
   }
 
