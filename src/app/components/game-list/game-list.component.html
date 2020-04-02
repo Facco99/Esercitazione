@@ -1,3 +1,3 @@
 <ul *ngFor="let lista of gameList">
-    <li [routerLink]="['/game-detail',lista.id]">{{lista.nome}}</li>
+    <li [routerLink]="['/game-detail',lista.id]">{{lista.nome}} <button (click)="modifica()">modifica</button> </li>
 </ul>

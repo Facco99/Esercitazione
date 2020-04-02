@@ -21,4 +21,8 @@ export class GameListComponent implements OnInit {
     this.gameListService;
   }
 
+  modifica(){
+    this.route.navigateByUrl("/edit-game");
+  }
+
 }
