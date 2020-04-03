@@ -37,4 +37,14 @@ export class MenuComponent implements OnInit {
     this.router.navigateByUrl("/login");
   }
 
+  showEdit():boolean{
+      if(sessionStorage.getItem('ruolo')==="admin"){
+        console.log("sono admin");
+        return true;
+      }else{
+        console.log("non sono admin");
+        return false;
+      }
+  }
+
 }

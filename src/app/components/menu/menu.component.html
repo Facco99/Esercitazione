@@ -1,5 +1,15 @@
 <ul *ngIf="currentRoute!='/login'">
     <div>Benvenuto {{user}}</div>
-    <li><button *ngFor="let menuItem of menuList" routerLink='{{menuItem.url}}'>{{menuItem.description}}</button></li>
+    <ng-container *ngFor="let menuItem of menuList">
+        <ng-container *ngIf="showEdit(); else notAdmin">
+            <button routerLink='{{menuItem.url}}'>{{menuItem.description}}</button>
+        </ng-container>
+        <ng-template #notAdmin>
+            <ng-container *ngIf="menuItem.id!=3">
+                <button routerLink='{{menuItem.url}}'>{{menuItem.description}}</button>
+            </ng-container>
+        </ng-template>
+    </ng-container>
+    <!-- <li><button *ngFor="let menuItem of menuList" routerLink='{{menuItem.url}}'>{{menuItem.description}}</button></li> -->
     <button (click)="logout()">Logout</button>
 </ul>
