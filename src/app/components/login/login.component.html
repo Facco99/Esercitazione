@@ -13,29 +13,25 @@
 <button (click)="login()">Login</button> -->
 
 <form [formGroup]="loginForm" (ngSubmit)="login()">
-    <div class="wrapper">
-        <div class="center">
-            <div>
-                <label for="username">Username</label>
-                <input type="text" id="username" formControlName="username">
-                <p *ngIf="usernameControl.status === 'INVALID' && usernameControl.dirty">Campo username obbligatorio!</p>
+    <div>
+        <label for="username">Username</label>
+        <input type="text" id="username" formControlName="username">
+        <p *ngIf="usernameControl.status === 'INVALID' && usernameControl.dirty">Campo username obbligatorio!</p>
 
-            </div>
+    </div>
 
-            <div>
-                <label for="password">Password</label>
-                <input type="password" id="password" formControlName="password">
-                <p *ngIf="passwordControl.status === 'INVALID' && passwordControl.dirty">Campo password obbligatorio!</p>
-            </div>
+    <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" formControlName="password">
+        <p *ngIf="passwordControl.status === 'INVALID' && passwordControl.dirty">Campo password obbligatorio!</p>
+    </div>
 
-            <div>
-                <label for="ruolo">Ruolo</label>
-                <select id="ruolo" formControlName="ruolo">
+    <div>
+        <label for="ruolo">Ruolo</label>
+        <select id="ruolo" formControlName="ruolo">
                     <option *ngFor="let ruolo of rules" [value]="ruolo">{{ruolo}}</option>
                 </select>
-            </div>
-
-            <button type="submit" [disabled]="loginForm.status === 'INVALID'">Submit</button>
-        </div>
     </div>
+
+    <button type="submit" [disabled]="loginForm.status === 'INVALID'">Submit</button>
 </form>
