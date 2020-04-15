@@ -1,28 +1,14 @@
-<!-- <div>
-    <label for="usr">Username</label>
-    <input type="text" placeholder="username" id="usr" [(ngModel)]="username">
-</div>
-<div>
-    <label for="pwd">Password</label>
-    <input type="password" placeholder="password" id="pwd" [(ngModel)]="password">
-</div>
-<div>
-    <label for="ruolo">Ruolo</label>
-    <input type="text" placeholder="password" id="ruolo" [(ngModel)]="ruolo">
-</div>
-<button (click)="login()">Login</button> -->
-
 <form [formGroup]="loginForm" (ngSubmit)="login()">
     <div>
         <label for="username">Username</label>
-        <input type="text" id="username" formControlName="username">
+        <input type="text" id="username" formControlName="username" placeholder="Username">
         <p *ngIf="usernameControl.status === 'INVALID' && usernameControl.dirty">Campo username obbligatorio!</p>
 
     </div>
 
     <div>
         <label for="password">Password</label>
-        <input type="password" id="password" formControlName="password">
+        <input type="password" id="password" formControlName="password" placeholder="Password">
         <p *ngIf="passwordControl.status === 'INVALID' && passwordControl.dirty">Campo password obbligatorio!</p>
     </div>
 

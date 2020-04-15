@@ -30,7 +30,7 @@ export class LoginService {
     }
     else{
       window.alert("login errato");
-      this.router.navigateByUrl('/Login');
+      this.router.navigateByUrl('/login');
     }
   }
 
