@@ -1,1 +1,16 @@
-<p>register works!</p>
+<form [formGroup]="registerForm">
+    <div>
+        <label for="username">Username</label>
+        <input type="text" id="username" formControlName="username" placeholder="Username">
+        <p *ngIf="usernameControl.status === 'INVALID' && usernameControl.dirty">Campo username obbligatorio/non valido!</p>
+
+    </div>
+
+    <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" formControlName="password" placeholder="Password">
+        <p *ngIf="passwordControl.status === 'INVALID' && passwordControl.dirty">Campo password obbligatorio/non valido!</p>
+    </div>
+
+    <button type="submit" [disabled]="registerForm.status === 'INVALID'">Submit</button>
+</form>

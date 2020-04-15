@@ -8,6 +8,7 @@ import { GameDetailComponent } from './components/game-detail/game-detail.compon
 import { LoginService } from './guard/login.service';
 import { CanactivateService } from './guard/canactivate-login.service';
 import { EditGameGuard } from './guard/edit-game.guard';
+import { RegisterComponent } from './components/register/register.component';
 
 const appRoutes: Routes = [
     {path: 'home', component:HomeComponent, canActivate: [LoginService]},
@@ -15,6 +16,7 @@ const appRoutes: Routes = [
     {path: 'edit-game', component:EditGameComponent, canActivate: [LoginService, EditGameGuard]},
     {path: 'game-detail/:id', component:GameDetailComponent, canActivate: [LoginService]},
     {path: 'login', component:LoginComponent, canActivate: [CanactivateService]},
+    {path: 'register', component:RegisterComponent},
     {path: '', redirectTo: '/login', pathMatch:'full'}
 ];
 
