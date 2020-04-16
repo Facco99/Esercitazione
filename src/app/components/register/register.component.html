@@ -1,4 +1,5 @@
-<form [formGroup]="registerForm">
+<h1>REGISTRATI</h1>
+<form [formGroup]="registerForm" (ngSubmit)="register()">
     <div>
         <label for="username">Username</label>
         <input type="text" id="username" formControlName="username" placeholder="Username">
@@ -12,5 +13,6 @@
         <p *ngIf="passwordControl.status === 'INVALID' && passwordControl.dirty">Campo password obbligatorio/non valido!</p>
     </div>
 
-    <button type="submit" [disabled]="registerForm.status === 'INVALID'">Submit</button>
+    <input type="submit" [disabled]="registerForm.status === 'INVALID'" value="Register">
 </form>
+<a href="/login">Torna alla login</a>

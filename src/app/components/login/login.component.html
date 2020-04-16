@@ -1,3 +1,4 @@
+<H1>LOGIN</H1>
 <form [formGroup]="loginForm" (ngSubmit)="login()">
     <div>
         <label for="username">Username</label>
@@ -19,6 +20,6 @@
                 </select>
     </div>
 
-    <button type="submit" [disabled]="loginForm.status === 'INVALID'">Submit</button>
+    <input type="submit" [disabled]="loginForm.status === 'INVALID'" value="Login">
 </form>
 <a href="/register">Se non sei registrato clicca qui</a>
